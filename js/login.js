@@ -5,7 +5,7 @@ $("#login").click(function validate(){
 var inputEmail = document.getElementById("inputEmail").value;
 var inputPassword = document.getElementById("inputPassword").value;
 if ( inputEmail == "admin@nw.com" && inputPassword == "12345**"){
-window.location = "index.html"; // Redirecting to other page.
+window.location = "bashboard.html"; // Redirecting to other page.
 return false;
 }
 else{
