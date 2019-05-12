@@ -1,9 +1,8 @@
-$(function () {
-    $().ready(function () {
+
+    $(document).ready(function () {
         console.log('Get data');
         $.get("../json/customers.json", function (data, status) {
-            // console.log(data);
-            // console.log(status);
+            var customers=data
             if (status == 'success') {
                 // $("#name").text(data.name);
                 var customers = data;
@@ -18,4 +17,3 @@ $(function () {
             }
         });
     });
-});
