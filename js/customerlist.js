@@ -1,7 +1,7 @@
 
     $(document).ready(function () {
         console.log('Get data');
-        $.get("../json/customers.json", function (data, status) {
+        $.get("json/customers.json", function (data, status) {
             var customers=data
             if (status == 'success') {
                 // $("#name").text(data.name);
