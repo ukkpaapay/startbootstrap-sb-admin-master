@@ -79,7 +79,7 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Customer Screens:</h6>
           <a class="dropdown-item" href="customer.html">customerDetail</a>
-          <a class="dropdown-item" href="editcustomer.html">Editcustomer</a>
+          <a class="dropdown-item" href="editcust.html">Editcustomer</a>
         </div>
       </li>
       <li class="nav-item active">
@@ -107,11 +107,14 @@
             <form>
                 <div class=" container-fluid">
                   <a>Edit Customer</a><br>
-                  <input type="text" class="form-control" placeholder="customerID" aria-label="Search" aria-describedby="basic-addon2"><br>
-                  <input type="text" class="form-control" placeholder="companyName" aria-label="Search" aria-describedby="basic-addon2"><br>
-                  <input type="text" class="form-control" placeholder="contactName" aria-label="Search" aria-describedby="basic-addon2"><br>
-                  <input type="text" class="form-control" placeholder="contactTitle" aria-label="Search" aria-describedby="basic-addon2"><br>
+                  <input type="text" class="form-control" placeholder="customerID" aria-label="Search" aria-describedby="basic-addon2" required pattern="[A-Z]{5}"><br>
+                  <input type="text" class="form-control" placeholder="companyName" aria-label="Search" aria-describedby="basic-addon2" required pattern="^[\p{L}]+"><br>
+                  <input type="text" class="form-control" placeholder="contactName" aria-label="Search" aria-describedby="basic-addon2" required pattern="^[\p{L}]+"><br>
+                  <input type="text" class="form-control" placeholder="contactTitle" aria-label="Search" aria-describedby="basic-addon2" required pattern="^[\p{L}]0-9]+"><br>
                   <input type="text" class="form-control" placeholder="Address" aria-label="Search" aria-describedby="basic-addon2"><br>
+                </div>
+                <div class="btn d-flex justify-content-center" style="margin-top: 20%">
+                    <button class="nav-link btn btn-primary font-weight-bold" type="submit">SUBMIT</button>
                 </div>
                 </form>
         </div>
