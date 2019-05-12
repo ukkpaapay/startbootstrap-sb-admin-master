@@ -9,7 +9,7 @@
                 for (var i = 0;i < data.length;i++) {
                     var o = i+1;
                     htmlString = '<tr><td>' + customers[i].customerID +
-                '</td><td ><a href="custdetail.html" onclick="setCookies(' + i + ')">' +
+                '</td><td ><a href="editcustomer.html" onclick="setCookies(' + i + ')">' +
                 customers[i].companyName + '</td><td>' +
                 customers[i].contactName + '</td><td>' +
                 customers[i].contactTitle + '</a></td></tr>'
