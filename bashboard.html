@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin - Tables</title>
+  <title>SB Admin - Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,27 +35,27 @@
     <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
          
-      </form>
+    </form>
 
-        <!-- Navbar -->
-        <ul class="navbar-nav ml-auto ml-md-0">
-                <li class="nav-item dropdown no-arrow">
-                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i>
-                        <img src="https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.0-9/27332523_1680854438640624_3704748231219667550_n.jpg?_nc_cat=106&_nc_eui2=AeGlXDYqelgeFLlvZLWB3EML8FQrs-2OP3q2gXgIwL6vsAZ6uVgIBbnL7mZAaEWKx23uQ-zrMRzR4O0cT9fRpkuQJxaHr6LI0SZ9sI7SiWkS_g&_nc_ht=scontent.fbkk5-8.fna&oh=c18a5310acc7f0022fb1a8c1324cf576&oe=5D5DBFE8" class="rounded-circle"alt="Smiley face" height="30" width="35">
-                    </i>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="about.html">About </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
-                  </div>
-                </li>
-              </ul>
-          
-            </nav>
-          
-            <div id="wrapper">
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown no-arrow">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i>
+                <img src="https://scontent.fbkk5-8.fna.fbcdn.net/v/t1.0-9/27332523_1680854438640624_3704748231219667550_n.jpg?_nc_cat=106&_nc_eui2=AeGlXDYqelgeFLlvZLWB3EML8FQrs-2OP3q2gXgIwL6vsAZ6uVgIBbnL7mZAaEWKx23uQ-zrMRzR4O0cT9fRpkuQJxaHr6LI0SZ9sI7SiWkS_g&_nc_ht=scontent.fbkk5-8.fna&oh=c18a5310acc7f0022fb1a8c1324cf576&oe=5D5DBFE8" class="rounded-circle"alt="Smiley face" height="30" width="35">
+            </i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="about.html">About </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          </div>
+        </li>
+      </ul>
+  
+    </nav>
+  
+    <div id="wrapper">
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
@@ -83,11 +83,11 @@
       </div>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
-        <i class="fas fa-user-circle fa-fw"></i>
-        <span>LogOut</span>
-      </a>
-    </li>
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
+          <i class="fas fa-user-circle fa-fw"></i>
+          <span>LogOut</span>
+        </a>
+      </li>
     </ul>
 
     <div id="content-wrapper">
@@ -99,27 +99,59 @@
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Tables</li>
+          <li class="breadcrumb-item active">Overview</li>
         </ol>
+
+        <!-- Icon Cards-->
+        <div class="row">
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-primary o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fas fa-fw fa-comments"></i>
+                </div>
+                <div class="mr-5 " id="data1">New Customer is </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-warning o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fas fa-fw fa-list"></i>
+                </div>
+                <div class="mr-5"id="data2">New Orders is </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-success o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fas fa-fw fa-shopping-cart"></i>
+                </div>
+                <div class="mr-5"id="data3">New products is </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-3">
+            <div class="card text-white bg-danger o-hidden h-100">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="fas fa-fw fa-life-ring"></i>
+                </div>
+                <div class="mr-5"id="data4">New suppliers is </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <!-- DataTables Example -->
         <div class="card mb-3">
             <div class="card-header">
-              <i class="fas "></i>
-              Data Table Example
-              <li class=" dropdown">
-                    <a class=" dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class=""></i>
-                      <span>Edit</span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                      <h6 class="dropdown-header">Customer Screens:</h6>
-                      <a class="dropdown-item" href="editcustomer.html">Edit</a>
-                      <a class="dropdown-item" href="customer.html">Back</a>
-                    </div>
-                  </li>
-                
-            </div>
-              
+              <i class="fas fa-table"></i>
+              Customers Table Example</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="datalist" width="100%" cellspacing="0">
@@ -129,9 +161,16 @@
                       <th>companyName</th>
                       <th>contactName</th>
                       <th>contactTitle</th>
-                      <th>Address</th>
                     </tr>
                   </thead>
+                  <tfoot>
+                    <tr>
+                      <th>customerID</th>
+                      <th>companyName</th>
+                      <th>contactName</th>
+                      <th>contactTitle</th>
+                    </tr>
+                  </tfoot>
                   <tbody>
   
   
@@ -144,12 +183,12 @@
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
           </div>
-
-        <p class="small text-center text-muted my-5">
-          <em>More table examples coming soon...</em>
-        </p>
-
-      </div>
+  
+          <p class="small text-center text-muted my-5">
+            <em>More table examples coming soon...</em>
+          </p>
+  
+        </div>
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
@@ -194,12 +233,12 @@
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
+
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
+  <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
@@ -208,8 +247,9 @@
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/custdetail.js"></script>
-  <script src="js/js.cookie.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/customerlist.js"></script>
+  <script src="js/count.js"></script>
 
 </body>
 
