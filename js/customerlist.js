@@ -1,23 +1,27 @@
-
-    $(document).ready(function () {
-        console.log('Get data');
-        $.getJSON("json/customers.json", function (data, status) {
-            var customers=data
-            if (status == 'success') {
-                // $("#name").text(data.name);
-                var customers = data;
-                for (var i = 0;i < data.length;i++) {
-                    htmlString = '<tr><td>' + customers[i].customerID +
-                '</td><td ><a href="custdetail.html" onclick="setCookies(' + i + ')">' +
-                customers[i].companyName + '</td><td>' +
-                customers[i].contactName + '</td><td>' +
-                customers[i].contactTitle + '</a></td></tr>'
-            $('#datalist').append(htmlString);
-
-                }
+$(function () {
+   
+    $.get("json/customers.json", function (data, status) { //,message)
+        if (status == 'success') {
+            console.log(status);
+         
+            var customers = data;
+            var i = 0
+            for (i = 0;i< data.length;i++) {
+                var customer = customers[i];
+            
+                var ID = '<a href="custdetail.html" onclick="setCookies('+i+')">'+customer.companyName +'</a>' ;
+                var tableRow = '<tr><td>'+customer.customerID+ '</td><td>' + ID + '</td><td>' + customer.contactName + '</td><td>' + customer.contactTitle + '</td></tr>';
+                $("#datalist").append(tableRow);
+                
+               
             }
-        });
-        
-
+            
+         
+        }
     });
+});
+
+  function setCookies(i){
+    document.cookie = i;
+  }
 
