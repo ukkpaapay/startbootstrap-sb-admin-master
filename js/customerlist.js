@@ -1,19 +1,22 @@
 
     $(document).ready(function () {
         console.log('Get data');
-        $.get("json/customers.json", function (data, status) {
+        $.getJSON("json/customers.json", function (data, status) {
             var customers=data
             if (status == 'success') {
                 // $("#name").text(data.name);
                 var customers = data;
-                var tableHead = '<thead><tr><th>customerID</th><th>companyName</th><th>contactName</th><th>contactTitle</th></tr></tfoot>'
-                $('#datalist').append(tableHead);
-                for (var index in customers) {
-                    var customers = customers[index];
-                    var tableRow = '<tr><td>' +customers.customerID+ '</td><td>' +customers.companyName + '</td><td>' +customers.contactName + '</td><td>' +customers.contactTitle + '</td></tr>'
-                    $('#datalist').append(tableRow);
-                    console.log(customers);
+                for (var i = 0;i < data.length;i++) {
+                    var o = i+1;
+                    htmlString = '<tr><td>' + customers[i].customerID +
+                '</td><td ><a href="custdetail.html" onclick="setCookies(' + i + ')">' +
+                customers[i].companyName + '</td><td>' +
+                customers[i].contactName + '</td><td>' +
+                customers[i].contactTitle + '</a></td></tr>'
+            $('#datalist').append(htmlString);
+
                 }
             }
         });
     });
+
