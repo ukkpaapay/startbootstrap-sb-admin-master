@@ -44,7 +44,7 @@
                 <i class="fas fa-user-circle fa-fw"></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">About </a>
+                <a class="dropdown-item" href="about.html">About </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
               </div>
@@ -91,8 +91,21 @@
           <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Tables</li>
+          <li class="breadcrumb-item active">Edit</li>
         </ol>
+
+        <!-- Navbar Search -->
+        <div class="container">
+            <form>
+                <div class=" container-fluid">
+                  <a>Edit Customer</a><br>
+                  <input type="text" class="form-control" placeholder="customerID" aria-label="Search" aria-describedby="basic-addon2"><br>
+                  <input type="text" class="form-control" placeholder="companyName" aria-label="Search" aria-describedby="basic-addon2"><br>
+                  <input type="text" class="form-control" placeholder="contactName" aria-label="Search" aria-describedby="basic-addon2"><br>
+                  <input type="text" class="form-control" placeholder="contactTitle" aria-label="Search" aria-describedby="basic-addon2"><br>
+                </div>
+                </form>
+        </div>
 
         
       <!-- /.container-fluid -->
@@ -153,7 +166,6 @@
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/customerlist.js"></script>
 
 </body>
 
